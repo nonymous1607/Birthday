@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 5;
+      padding: 8;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #6200ff, #0f997b, #5200b1);
+      animation: gradientBG 10s infinite alternate;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .container {
+      text-align: center;
+      color: #ac13c0;
+    }
+    .message {
+      font-size: 3rem;
+      text-shadow: 0 0 5px #ff6ec7, 0 0 10px #fbc2eb, 0 0 15px #ff6ec7, 0 0 20px #fbc2eb;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6ec7, 0 0 20px #fbc2eb; }
+      to { text-shadow: 0 0 20px #ff6ec7, 0 0 30px #fbc2eb; }
+    }
+    .balloons {
+      margin-top: 20px;
+    }
+    .balloon {
+      width: 50px;
+      height: 70px;
+      margin: 0 10px;
+      display: inline-block;
+      position: relative;
+      background: radial-gradient(circle at top, #ff6ec7, #ff316e);
+      border-radius: 50%;
+      animation: float 4s infinite ease-in-out;
+    }
+    .balloon:after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 40px;
+      background: #fff;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+    .balloon:nth-child(2) { animation-delay: 0.5s; }
+    .balloon:nth-child(3) { animation-delay: 1s; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message">🎉 Happy Birthday! 🎂</div>
+    <div class="balloons">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+    </div>
+  </div>
+</body>
+</html>
